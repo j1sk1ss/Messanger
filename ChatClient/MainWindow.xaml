@@ -1,0 +1,22 @@
+﻿<Window x:Class="ChatClient.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ChatClient"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="506.148" Closing="Window_Closing">
+    <Grid Margin="0,0,2,0">
+        <TextBox x:Name="tbUserName" HorizontalAlignment="Left" Height="24" Margin="225,28,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="112" TextChanged="tbUserName_TextChanged"/>
+        <Button x:Name="bConDiscon" Click="Button_Click" Content="Подключиться" HorizontalAlignment="Left" VerticalAlignment="Top" Width="210" Margin="10,10,0,0" Height="42"/>
+        <TextBox x:Name="tbMessage" HorizontalAlignment="Left" Height="24" Margin="10,312,0,0" TextWrapping="Wrap" Text="Введите сообщение" VerticalAlignment="Top" Width="476" KeyDown="tbMessage_KeyDown" TextChanged="tbMessage_TextChanged"/>
+        <ListBox  x:Name="lbChat" HorizontalAlignment="Left" Height="250" VerticalAlignment="Top" Width="476" Margin="10,57,0,0"/>
+        <TextBlock x:Name="textBlock" HorizontalAlignment="Left" Margin="225,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="261"><Run Text="Ваше Имя:"/>
+
+        </TextBlock>
+        <CheckBox x:Name="checkBox" Width="122" Margin="348,0,26,391" Checked="checkBox_Checked" Content="Шифрование">
+
+        </CheckBox>
+        <TextBox x:Name="textBox" TextWrapping="Wrap" Text="Ключ шифра" Margin="348,28,12,361"/>
+    </Grid>
+</Window>
